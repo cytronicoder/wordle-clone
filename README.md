@@ -2,7 +2,7 @@
 
 Welcome to the most _ambitiously_ twisted Wordle clone you'll ever lay eyes on! If you thought guessing five-letter words was challenging, wait until you try our new modes that might make you question your life choices.
 
-Play at [wordle.cytronicoder.com](https://wordle.cytronicoder.com/) today!
+Play at [wordle.cytronicoder.com](https://wpp.cytronicoder.com/) today!
 
 ## Why? Wordle was so 2021
 
