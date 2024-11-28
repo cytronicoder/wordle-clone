@@ -44,9 +44,23 @@
   <body>
     <h1 class="hover-animation">Wordle</h1>
 
-    <div id="game-board"></div>
+    <div id="gamemode-selection">
+      <label for="gamemode">Select Gamemode:</label>
+      <select id="gamemode">
+        <option value="normal">Normal Mode</option>
+        <option value="inverted">Inverted Mode</option>
+        <option value="speedrun">Speedrun Mode</option>
+      </select>
+      <button id="start-button">Start Game</button>
+    </div>
 
-    <div id="keyboard-cont">
+    <div id="timer" style="display: none">
+      <span id="time-left">60</span> seconds left
+    </div>
+
+    <div id="game-board" style="display: none"></div>
+
+    <div id="keyboard-cont" style="display: none">
       <div class="first-row">
         <button class="keyboard-button">q</button>
         <button class="keyboard-button">w</button>
