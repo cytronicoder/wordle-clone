@@ -132,7 +132,7 @@ function insertLetter(pressedKey) {
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve, _reject) => {
     const animationName = `${prefix}${animation}`
     const node = element
     node.style.setProperty('--animate-duration', '0.3s')

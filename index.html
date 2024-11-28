@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Wordle clone made with HTML5, CSS3, and JavaScript"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Wordle clone made with HTML5, CSS3, and JavaScript" />
+    <meta property="og:title" content="Wordle" />
+    <meta
+      property="og:description"
+      content="A Wordle clone made with HTML5, CSS3, and JavaScript"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wordle.cytronicoder.com" />
 
-  <!-- Embed -->
-  <meta property="og:title" content="A Wordle clone" />
-  <meta property="og:description" content="A Wordle clone made with HTML5, CSS3, and JavaScript" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.wordle-clone.cytronicoder.repl.co" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Wordle" />
+    <meta
+      property="twitter:description"
+      content="A Wordle clone made with HTML5, CSS3, and JavaScript"
+    />
+    <meta property="twitter:site" content="https://wordle.cytronicoder.com" />
+    <meta property="twitter:creator" content="@cytronicoder" />
 
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="A Wordle clone" />
-  <meta property="twitter:description" content="A Wordle clone made with HTML5, CSS3, and JavaScript" />
-  <meta property="twitter:site" content="http://www.wordle-clone.cytronicoder.repl.co" />
-  <meta property="twitter:creator" content="@cytronicoder" />
+    <link rel="favicon" href="favicon.ico" />
 
-  <!-- Favicon -->
-  <link rel="favicon" href="favicon.ico" />
-  
-  <!-- Animation and jquery -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <title>A Wordle clone</title>
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<body>
-  <h1 class="hover-animation">A Wordle clone</h1>
+    <title>Wordle</title>
+  </head>
 
-  <div id="game-board"></div>
+  <body>
+    <h1 class="hover-animation">Wordle</h1>
 
-  <div id="keyboard-cont">
-    <div class="first-row">
-      <button class="keyboard-button">q</button>
-      <button class="keyboard-button">w</button>
-      <button class="keyboard-button">e</button>
-      <button class="keyboard-button">r</button>
-      <button class="keyboard-button">t</button>
-      <button class="keyboard-button">y</button>
-      <button class="keyboard-button">u</button>
-      <button class="keyboard-button">i</button>
-      <button class="keyboard-button">o</button>
-      <button class="keyboard-button">p</button>
+    <div id="game-board"></div>
+
+    <div id="keyboard-cont">
+      <div class="first-row">
+        <button class="keyboard-button">q</button>
+        <button class="keyboard-button">w</button>
+        <button class="keyboard-button">e</button>
+        <button class="keyboard-button">r</button>
+        <button class="keyboard-button">t</button>
+        <button class="keyboard-button">y</button>
+        <button class="keyboard-button">u</button>
+        <button class="keyboard-button">i</button>
+        <button class="keyboard-button">o</button>
+        <button class="keyboard-button">p</button>
+      </div>
+      <div class="second-row">
+        <button class="keyboard-button">a</button>
+        <button class="keyboard-button">s</button>
+        <button class="keyboard-button">d</button>
+        <button class="keyboard-button">f</button>
+        <button class="keyboard-button">g</button>
+        <button class="keyboard-button">h</button>
+        <button class="keyboard-button">j</button>
+        <button class="keyboard-button">k</button>
+        <button class="keyboard-button">l</button>
+      </div>
+      <div class="third-row">
+        <button class="keyboard-button">Enter</button>
+        <button class="keyboard-button">z</button>
+        <button class="keyboard-button">x</button>
+        <button class="keyboard-button">c</button>
+        <button class="keyboard-button">v</button>
+        <button class="keyboard-button">b</button>
+        <button class="keyboard-button">n</button>
+        <button class="keyboard-button">m</button>
+        <button class="keyboard-button">Del</button>
+      </div>
     </div>
-    <div class="second-row">
-      <button class="keyboard-button">a</button>
-      <button class="keyboard-button">s</button>
-      <button class="keyboard-button">d</button>
-      <button class="keyboard-button">f</button>
-      <button class="keyboard-button">g</button>
-      <button class="keyboard-button">h</button>
-      <button class="keyboard-button">j</button>
-      <button class="keyboard-button">k</button>
-      <button class="keyboard-button">l</button>
-    </div>
-    <div class="third-row">
-      <button class="keyboard-button">Enter</button>
-      <button class="keyboard-button">z</button>
-      <button class="keyboard-button">x</button>
-      <button class="keyboard-button">c</button>
-      <button class="keyboard-button">v</button>
-      <button class="keyboard-button">b</button>
-      <button class="keyboard-button">n</button>
-      <button class="keyboard-button">m</button>
-      <button class="keyboard-button">Del</button>
-    </div>
-  </div>
 
-  <!-- Add How to Play button -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="dark" defer></script>
-
-  <!-- Animation and jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-
-  <!-- Custom scripts -->
-  <script src="script.js"></script>
-  <script src="buttons.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="script.js"></script>
+    <script src="buttons.js"></script>
+  </body>
 </html>

@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
- text-align: center;
+  text-align: center;
 }
 
 #game-board {
@@ -68,32 +68,32 @@ h1 {
 }
 
 button {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 span.ripple {
-    position: absolute;
-    border-radius: 50%;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-animation: Ripple 600ms linear;
-            animation: Ripple 600ms linear;
-    background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: Ripple 600ms linear;
+  animation: Ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 @-webkit-keyframes Ripple {
-    to {
-      -webkit-transform: scale(4);
-              transform: scale(4);
-      opacity: 0;
-    }
+  to {
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 @keyframes Ripple {
-    to {
-      -webkit-transform: scale(4);
-              transform: scale(4);
-      opacity: 0;
-    }
+  to {
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
 }
